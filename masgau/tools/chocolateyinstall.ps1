@@ -1,6 +1,4 @@
-﻿
-$ErrorActionPreference = 'Stop';
-
+﻿$ErrorActionPreference = 'Stop';
 
 $packageName= 'masgau'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
@@ -25,21 +23,3 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
