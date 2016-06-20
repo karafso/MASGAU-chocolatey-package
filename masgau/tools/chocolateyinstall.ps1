@@ -8,14 +8,14 @@ $ErrorActionPreference = 'Stop'; # stop on all errors
 $packageName= 'masgau' # arbitrary name for the package, used in messages
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'http://masgau.org/downloads/MASGAU-1.0.6-Release-Setup.exe' # download url
-$url64      = '' # 64bit URL here or remove - if installer contains both (very rare), use $url
+$url64      = $url
 #$fileLocation = Join-Path $toolsDir 'NAME_OF_EMBEDDED_INSTALLER_FILE'
 #$fileLocation = '\\SHARE_LOCATION\to\INSTALLER_FILE'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = 'EXE_MSI_OR_MSU' #only one of these: exe, msi, msu
+  fileType      = 'exe' #only one of these: exe, msi, msu
   url           = $url
   url64bit      = $url64
   #file         = $fileLocation
@@ -40,9 +40,9 @@ $packageArgs = @{
 
   # optional, highly recommended
   softwareName  = 'masgau*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
-  checksum      = ''
+  checksum      = '406C25722B02B7694208385DA1BF6345'
   checksumType  = 'md5' #default is md5, can also be sha1, sha256 or sha512
-  checksum64    = ''
+  checksum64    = '406C25722B02B7694208385DA1BF6345'
   checksumType64= 'md5' #default is checksumType
 }
 
