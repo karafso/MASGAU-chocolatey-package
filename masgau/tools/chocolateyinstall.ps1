@@ -15,7 +15,7 @@ $packageArgs = @{
   silentArgs    = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-"
   validExitCodes= @(0, 3010, 1641)
 
-  softwareName  = 'masgau*'
+  softwareName  = 'masgau'
   checksum      = '406C25722B02B7694208385DA1BF6345'
   checksumType  = 'md5'
   checksum64    = '406C25722B02B7694208385DA1BF6345'
